@@ -41,6 +41,12 @@ typedef int sigjmp_buf[((9 * 2) + 3 + 16) + 1];
 typedef int my_JmpBuf[((9 * 2) + 3 + 16)];
 printf("my_JmpBuf  %i\n", sizeof(my_JmpBuf));
 /*
+
+/* freebsd
+typedef struct _sigjmp_buf { long _sjb[12]; } sigjmp_buf[1];
+typedef struct _jmp_buf { long _jb[12]; } jmp_buf[1];
+*/
+
 long n, m;
 jmp_buf j;
 
