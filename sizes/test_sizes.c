@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
-       #include <sys/stat.h>
-              #include <unistd.h>
+#include <sys/stat.h>
+#include <unistd.h>
 #include <setjmp.h>
+#include <sys/socket.h>
 
 typedef enum
 {
@@ -39,6 +40,7 @@ printf("__jmp_buf  %i\n", sizeof(__jmp_buf));
 printf("__sigset_t  %i\n", sizeof(__sigset_t));
 printf("jmp_buf  %i\n", sizeof(jmp_buf));
 printf("sigjmp_buf  %i\n", sizeof(sigjmp_buf));
+printf("socklen_t  %i\n", sizeof(socklen_t));
 /*
 typedef
         struct Unix_JmpBuf {
