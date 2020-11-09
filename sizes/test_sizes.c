@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <setjmp.h>
 #include <sys/socket.h>
+#include <openssl/ssl.h>
 
 typedef enum
 {
@@ -21,6 +22,7 @@ printf("short int %i\n", sizeof(short int));
 printf("int %i\n", sizeof(int));
 printf("long %i\n", sizeof(long));
 printf("long int %i\n", sizeof(long int));
+printf("double %i\n", sizeof(double));
 printf("size_t %i\n", sizeof(size_t));
 printf("dev_t %i\n", sizeof(dev_t));
 printf("ino_t %i\n", sizeof(ino_t));
